@@ -5,7 +5,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "lint": "eslint --ext .ts,.tsx ./src"
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "fix": "yarn format && yarn lint:fix"
   },
   "dependencies": {
     "react": "^17.0.2",

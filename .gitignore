@@ -9,3 +9,4 @@ dist-ssr
 .pnpm-debug.log
 .idea
 .env
+eslint-setting.json

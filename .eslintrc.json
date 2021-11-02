@@ -81,6 +81,20 @@
       "peerDependencies": false
     }],
     // propsにスプレッド演算子を展開するのを許容するかどうか
-    "react/jsx-props-no-spreading": ["off"]
+    "react/jsx-props-no-spreading": ["off"],
+    // default propsを利用するかどうか
+    "react/require-default-props": "off",
+    // export defaultを優先させるかどうか
+    "import/prefer-default-export": "off",
+    // 使っちゃ駄目な型を設定
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ]
   }
 }

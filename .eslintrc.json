@@ -79,6 +79,8 @@
       "error", {
       "devDependencies": ["**/stories/**"],
       "peerDependencies": false
-    }]
+    }],
+    // propsにスプレッド演算子を展開するのを許容するかどうか
+    "react/jsx-props-no-spreading": ["off"]
   }
 }

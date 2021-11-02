@@ -73,6 +73,28 @@
       }
     ],
     // propsの型チェックはtsに任せる
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    // devDependenciesをimportするしないの設定
+    "import/no-extraneous-dependencies": [
+      "error", {
+      "devDependencies": ["**/stories/**"],
+      "peerDependencies": false
+    }],
+    // propsにスプレッド演算子を展開するのを許容するかどうか
+    "react/jsx-props-no-spreading": ["off"],
+    // default propsを利用するかどうか
+    "react/require-default-props": "off",
+    // export defaultを優先させるかどうか
+    "import/prefer-default-export": "off",
+    // 使っちゃ駄目な型を設定
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ]
   }
 }

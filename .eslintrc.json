@@ -33,6 +33,12 @@
         "react/react-in-jsx-scope": "off",
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
+        "no-void": [
+            "error",
+            {
+                "allowAsStatement": true
+            }
+        ],
         "react/jsx-filename-extension": [
             "error",
             {

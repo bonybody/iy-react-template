@@ -1,58 +1,76 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "airbnb/hooks",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "prettier"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "project": "./tsconfig.json"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
-    "settings": {
-        "import/resolver": {
-            "node": {
-                "extensions": [".js", ".jsx", ".ts", ".tsx"]
-            }
-        }
-    },
-    "rules": {
-        "react/react-in-jsx-scope": "off",
-        "no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": ["error"],
-        "no-void": [
-            "error",
-            {
-                "allowAsStatement": true
-            }
-        ],
-        "react/jsx-filename-extension": [
-            "error",
-            {
-                "extensions": [
-                    ".jsx", ".tsx"
-                ]
-            }
-        ],
-        "import/extensions": ["error", "ignorePackages", {
-            "js": "never",
-            "jsx": "never",
-            "ts": "never",
-            "tsx": "never",
-            "mjs": "never"
-        }]
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  // ts, tsxを認識させる
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
     }
+  },
+  "rules": {
+    // import React from 'react'がv17から必要無いので
+    "react/react-in-jsx-scope": "off",
+    // デフォルトのno-use-beforeを残しておくとバグるらしいので
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    // 式文の最初に書くvoid式を許可する
+    "no-void": [
+      "error",
+      {
+        "allowAsStatement": true
+      }
+    ],
+    // jsx構文を含めてもいいファイルを追加する
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    // 拡張子いらない
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "mjs": "never"
+      }
+    ]
+  }
 }

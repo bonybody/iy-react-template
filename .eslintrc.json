@@ -71,6 +71,8 @@
         "tsx": "never",
         "mjs": "never"
       }
-    ]
+    ],
+    // propsの型チェックはtsに任せる
+    "react/prop-types": "off"
   }
 }

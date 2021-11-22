@@ -77,7 +77,7 @@
     // devDependenciesをimportするしないの設定
     "import/no-extraneous-dependencies": [
       "error", {
-      "devDependencies": ["**/stories/**"],
+      "devDependencies": ["**/stories/**", "**/*.stories.*"],
       "peerDependencies": false
     }],
     // propsにスプレッド演算子を展開するのを許容するかどうか

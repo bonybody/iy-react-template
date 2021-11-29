@@ -11,7 +11,9 @@
     "fix": "yarn format && yarn lint:fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "yarn run jest -env=jsdom"
+    "test": "yarn run jest -env=jsdom",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome"
   },
   "dependencies": {
     "react": "^17.0.2",
